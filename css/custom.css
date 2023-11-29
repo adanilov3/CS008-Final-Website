@@ -1,1 +1,286 @@
+:root {
+    --main-bg-color: #ffcdda;
+    --main-bg-color2: #ffa680;
+    --nav-bg-color: #a6ccff;
+    --main-text-color: #14022d;
+    --main-border-color: #14022d;
+    --odd-color: #ffe8ee;
+    --even-color: #ffd1de;
 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main, section, h1, h2, h3, h4, h5, nav, p {
+    padding: 1%;
+}
+
+p {
+    text-align: left;
+}
+
+a:hover {
+    background-color:#8aacd8;
+}
+
+html {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    background-image: url("yarn_background.jpg");
+    background-size: 100vmax;
+}
+
+body{
+    width: 90%;
+    margin: 1% auto;
+    background-color: rgba(236, 236, 250, 0.75);
+}
+
+header {
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+figure{
+    border: 2px solid var(--main-border-color);
+    width: 30%;
+    text-align: center;
+    font-size: smaller;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.rounded {
+    border-radius: 1em;
+}
+
+.floatright { 
+    float: right;
+    margin-left: 1em;
+}
+
+.floatleft {
+    float: left;
+    margin-right: 1em;
+}
+
+figcaption {
+    color: black;
+}
+
+nav a:link {
+    background-color: #a6ccff;
+    color: rgb(48, 0, 82);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.5s;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1%;
+}
+
+nav {
+    background-color: var(--nav-bg-color);
+    padding: 1% 0;
+    text-align: center;
+    font-size: larger;
+}
+
+ol {
+    font-size: large;
+}
+
+/* table styling */
+table {
+    border: medium solid var(--main-border-color);
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: auto;
+}
+
+table+p {
+    padding-top: 1em;
+}
+
+td, th {
+    border: thin solid var(--main-border-color);
+    padding: .5em;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--odd-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--even-color);
+}
+
+tr:hover{
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
+    text-decoration: underline;
+}
+
+/* form styling */
+form p {
+    text-indent: 0;
+    padding: 1%;
+}
+
+form {
+    border: medium solid var(--main-border-color);
+    background-color: var(--main-bg-color);
+    border-collapse: collapse;
+    max-width: 80%;
+    margin: auto;
+    padding: 1%;
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #F0D8FE;
+    border: thin solid white;
+    color: black;
+    padding: 1em 1em;
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+}
+
+caption, legend {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding-top: 1%;
+    margin-top: 1%
+}
+
+fieldset {
+    padding: 1%;
+    border: none;
+}
+
+fieldset.contact {
+    margin-top: -1em;
+}
+
+label {
+    display: block;
+}
+
+.radio label, .checkbox label {
+    display: inline;
+}
+
+.radio legend, .checkbox legend, .contact legend {
+    padding-top: 1.5em;
+}
+.radio input, .checkbox input {
+    width: initial;
+}
+
+.radio, .checkbox, .contact {
+    background-color: var(--nav-bg-color);
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+/**layout */
+
+body {
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+header { 
+    grid-area: header;
+    font-size: xx-large;
+}
+
+header img{
+    width: 20%;
+}
+
+h2 {
+    grid-area: h2;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "h2 h2" "box-1 box-2" "box-3 box-3";
+    grid-template-columns: auto auto;
+    grid-gap: 1%;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.straight {
+    grid-template-areas: "h2" "box-1" "box-2" "box-3";
+    grid-template-columns: auto;
+}
+
+.straight figure{
+    width: 50%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.box-1 {
+    grid-area: box-1;
+}
+
+.box-2 {
+    grid-area: box-2;
+}
+
+.box-3 {
+    grid-area: box-3;
+}
+
+.activePage {
+    background-color: black;
+}

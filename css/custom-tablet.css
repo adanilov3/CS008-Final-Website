@@ -1,0 +1,4 @@
+main {
+    grid-template-areas: "h2" "box-1" "box-2" "box-3";
+    grid-template-columns: auto;
+}
